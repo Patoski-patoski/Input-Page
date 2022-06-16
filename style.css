@@ -147,6 +147,8 @@ input:hover {
 @media screen and (max-width: 375px) {
   body{
     background: url(/images/bg-intro-mobile.png);
+      background-color: hsl(0, 100%, 74%);
+
   }
   .main-flex {
     width: 100%;
