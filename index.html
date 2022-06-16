@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsiveness and Media Queries</title>
     <link rel="stylesheet" href="style.css">
+    
     <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Poppins:wght@200;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -27,15 +28,16 @@
                         <input class="input" type="text" name="first-name" id="first-name" placeholder="First Name" required >
                         </label><br>
                         
-                        <label class="dormant ">
+                        <label class="dormant2 ">
                         <input class="input" type="text" name="last-name" id="last-name" placeholder="Last Name" required ></label><br>
 
-                        <label class="dormant ">
+                        <label class="dormant3 ">
                         <input class="input" type="email" name="email" id="email" placeholder="Email Address" required></label><br>
 
-                        <label class="dormant ">
+                        <label class="dormant4 ">
                         <input class="input" type="password" name="password" id="password" placeholder="Password" required></label><br>
-                        <button id="button" type="submit" required >Claim your fee trial</button>
+
+                        <button onclick="myButton()" id="button" type="submit" required >Claim your fee trial</button>
                        <br>
 
                        <p> By clicking the button, you are agreeing to our <span class="bold">Terms and Services</span>.</p>
@@ -47,31 +49,8 @@
              
         </div>
     </main>
-    <script>
-        const button = document.getElementById('#button');
-        const form = document.getElementById('#form');
-        const firstName = document.getElementById('#first-name');
-        const lastName = document.getElementById('#last-name');
-        const email = document.getElementById('#email');
-        const password = document.getElementById('#password');
-        const input = document.querySelector('.input');
-        const label = document.querySelector('.dormant');
 
-        document.querySelector('#button').addEventListener('click', ()=>{
-
-                if (input.value === '') {
-                    label.classList.toggle('active');
-                }
-                else if (input.value !== '') {
-                    label.classList.remove('active');
-                }
-                else {
-                    label.classList.toggle('active');
-                }
-
-         
-        });
-    </script>
+    <script src="script.js"></script>
     
 </body>
 </html>
