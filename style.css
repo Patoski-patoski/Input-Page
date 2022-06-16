@@ -1,137 +1,175 @@
-body{
-    padding: 0;
-    margin: 0;
-    line-height: 1.5;
-    background-image: url(/images/bg-intro-desktop.png);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color:hsl(0, 100%, 74%);
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  background-image: url(/images/bg-intro-desktop.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: hsl(0, 100%, 74%);
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
 }
 
-main{
-    width: 75%;
+main {
+  width: 75%;
 }
 
-
-.main-flex{
-   
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 75%;
-    z-index: 2;
+.main-flex {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  z-index: 2;
 }
 
-.main-flex-item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    
+.main-flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-article{
-    
-    margin-left: 1em;
-    width: 60%;
-    padding-left: 1em;
-
+article {
+  margin-left: 1em;
+  width: 60%;
+  padding-left: 1em;
 }
 
-article h1{
-    font-weight: 700;
-    font-size: 2.5em;
+article h1 {
+  font-weight: 700;
+  font-size: 2.5em;
 }
 
-
-aside{
-    width: 40%;
-    text-align: center;
-    
+aside {
+  width: 40%;
+  text-align: center;
 }
 
-
-form{
-
-    background-color: #fff;
-    border-radius: 9px;
-    padding: 1.5em;
-    box-shadow: 0px 5px 2px 0px hsl(0, 16%, 65%);
-
-   
+form {
+  background-color: #fff;
+  border-radius: 9px;
+  padding: 1.5em;
+  box-shadow: 0px 5px 2px 0px hsl(0, 16%, 65%);
 }
 
-form input{
-    
-    
+input:required {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  width: 90%;
+  margin: 0.5em;
+  margin-top: 1em;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  content: pppp;
 }
 
-input:required{
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    width: 90%;
-    margin: 0.5em;
-    margin-top: 1em;
-    font-family: Poppins, sans-serif;
-    font-weight: 700;
-    content: pppp;
+label {
+  position: relative;
 }
 
-button{
-    font-family: Poppins, sans-serif;
+/* .dormant:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url(/images/icon-error.svg) center / contain no-repeat;
+  display: none !important;
+} */
+
+.active:before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: url(/images/icon-error.svg) center / contain no-repeat;
+  display: inline !important;
 }
 
-
-
-
-
-.trial p{
-
-    background-color:  hsl(248, 32%, 49%);
-    color: #fff;
-    border-radius: 5px;
-    padding: 0.3em;
-    box-shadow: 0px 5px 2px 0px hsl(0, 16%, 65%);
-    
-
+input {
+  padding: 10px 30px;
 }
 
-button{
-    background-color:  hsl(154, 59%, 51%);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 15px;
-    width: 100%;
-    margin: 0.5em;
-    
+button {
+  font-family: Poppins, sans-serif;
+  text-transform: uppercase;
 }
 
-form p{
-    color: #000;
-    font-size: 9px;
-    
-
+.trial p {
+  background-color: hsl(248, 32%, 49%);
+  color: #fff;
+  border-radius: 5px;
+  padding: 1em;
+  box-shadow: 0px 5px 2px 0px hsl(0, 16%, 65%);
 }
 
-.bold{
+button {
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  width: 100%;
+  margin: 0.5em;
+}
 
-    font-weight: 600;
+form p {
+  color: #000;
+  font-size: 9px;
+}
+
+.bold {
+  font-weight: 600;
 }
 
 aside form p {
-    color:  hsl(246, 25%, 77%);
+  color: hsl(246, 25%, 77%);
 }
-aside form p span{
-    color: hsl(0, 100%, 74%);
+aside form p span {
+  color: hsl(0, 100%, 74%);
+}
+button:hover {
+  opacity: 0.5;
+}
+input:hover {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 375px) {
+  .main-flex {
+    width: 100%;
+  }
+  .main-flex-item {
+    display: flex;
+    flex-direction: column;
+  }
+  article {
+    width: 80%;
+    margin-top: 24em;
+    font-size: 0.7em;
+    text-align: center;
+  }
+  aside {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  input:required {
+    width: 70%;
+    margin: 0.5em;
+  }
+  button {
+    border-radius: 3px;
+    padding: 10px;
+    width: 80%;
+  }
 }
