@@ -2,7 +2,7 @@ body {
   padding: 0;
   margin: 0;
   line-height: 1.5;
-  background-image: url(/images/bg-intro-desktop.png);
+  background: url(/images/bg-intro-desktop.png);
   position: absolute;
   top: 0;
   left: 0;
@@ -145,6 +145,9 @@ input:hover {
 }
 
 @media screen and (max-width: 375px) {
+  body{
+    background: url(/images/bg-intro-mobile.png);
+  }
   .main-flex {
     width: 100%;
   }
